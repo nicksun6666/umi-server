@@ -1,0 +1,17 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "mongodb": "^4.4.1"
+  },
+  "scripts": {
+    "start": "nodemon express.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "multipart": "^0.1.5"
+  }
+}

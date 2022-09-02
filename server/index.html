@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    hello world!
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script>
+    const getInfo = () => {
+      $.ajax({
+        method: 'get',
+        url: 'http://localhost:3000/users',
+        success: (res) => {
+          console.log(res)
+        },
+      })
+    }
+    const setInfo = () => {
+      $.ajax({
+        method: 'post',
+        url: 'http://localhost:3000/users',
+        data: {
+          category: '123',
+          name: '1',
+          time: Date.now(),
+        },
+        success: (res) => {
+          console.log(res)
+        },
+      })
+    }
+    setInfo()
+    getInfo()
+  </script>
+</html>
